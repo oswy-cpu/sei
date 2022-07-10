@@ -78,3 +78,10 @@ seid gentx $WALLET 10000000usei \
 --details="-" \
 --security-contact="$EMAIL" \
 --website="-"
+
+echo "=================================================="
+
+echo -e "\e[1m\e[32mКопируйте GENTX, который находится ниже \e[0m" && sleep 1
+cat ~/.sei/config/gentx/gentx-*
+
+echo "=================================================="
