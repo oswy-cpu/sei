@@ -64,6 +64,10 @@ seid add-genesis-account $WALLET_ADDRESS 10000000usei
 
 echo "=================================================="
 
+echo -e "\e[1m\e[32mЗапишите mnemonic фразу, которая находится выше \e[0m" && sleep 1
+
+echo "=================================================="
+
 echo -e "\e[1m\e[32m8. Генерирую GENTX \e[0m" && sleep 1
 seid gentx $WALLET 10000000usei \
 --chain-id $CHAIN_ID \
