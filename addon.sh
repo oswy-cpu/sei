@@ -68,5 +68,5 @@ if [[ `service seid status | grep active` =~ "running" ]]; then
   echo -e "Your Sei node \e[32minstalled and works\e[39m!"
   echo -e "Press \e[7mQ\e[0m for exit from status menu"
 else
-  echo -e "Your Subspace node \e[31mwas not installed correctly\e[39m, please reinstall."
+  echo -e "Your Sei node \e[31mwas not installed correctly\e[39m, please reinstall."
 fi
