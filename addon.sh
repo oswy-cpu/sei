@@ -48,7 +48,7 @@ echo "=================================================="
 
 echo -e "\e[1m\e[32m5. Оптимизирую \e[0m" && sleep 1
 
-wget -qO optimize-configs.sh https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-testnet-2/optimize-configs.sh
+wget -qO optimize-configs.sh "https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-testnet-2/optimize-configs.sh"
 sudo chmod +x optimize-configs.sh && ./optimize-configs.sh
 sudo systemctl restart seid
 
