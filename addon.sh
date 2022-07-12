@@ -57,7 +57,3 @@ sudo systemctl restart seid
 sudo systemctl daemon-reload
 sudo systemctl enable seid
 sudo systemctl restart seid
-
-echo "=================================================="
-
-echo -e "\e[1m\e[32mВсё готово." && sleep 1
