@@ -42,7 +42,7 @@ RestartSec=3
 LimitNOFILE=65535
 
 [Install]
-WantedBy=multi-user.target > $HOME/seid.service
+WantedBy=multi-user.target" > $HOME/seid.service
 
 mv $HOME/seid* /etc/systemd/system/
 
