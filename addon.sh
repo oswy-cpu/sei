@@ -4,7 +4,6 @@ echo "=================================================="
 
 echo -e "\e[1m\e[32m1. Качаю генезис \e[0m" && sleep 1
 wget -O $HOME/.sei/config/genesis.json "https://raw.githubusercontent.com/sei-protocol/testnet/master/sei-incentivized-testnet/genesis.json"
-seid tendermint unsafe-reset-all --home $HOME/.sei
 
 echo "=================================================="
 
@@ -49,6 +48,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target" > $HOME/seid.service
 
+mv $HOME/seid* /etc/systemd/system/
 echo "=================================================="
 
 echo -e "\e[1m\e[32m5. Оптимизирую \e[0m" && sleep 1
@@ -57,16 +57,9 @@ wget -qO optimize-configs.sh "https://raw.githubusercontent.com/sei-protocol/tes
 sudo chmod +x optimize-configs.sh && ./optimize-configs.sh
 sudo systemctl restart seid
 
-mv $HOME/seid* /etc/systemd/system/
+sleep 30
+
 sudo systemctl daemon-reload
 sudo systemctl enable seid
+seid tendermint unsafe-reset-all --home $HOME/.sei
 sudo systemctl restart seid
-sleep 20
-echo "==================================================="
-echo -e '\n\e[42mCheck node status\e[0m\n' && sleep 1
-if [[ `service seid status | grep active` =~ "running" ]]; then
-  echo -e "Your Sei node \e[32minstalled and works\e[39m!"
-  echo -e "Press \e[7mQ\e[0m for exit from status menu"
-else
-  echo -e "Your Sei node \e[31mwas not installed correctly\e[39m, please reinstall."
-fi
