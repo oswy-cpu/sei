@@ -60,4 +60,4 @@ sudo systemctl restart seid
 
 echo "=================================================="
 
-echo -e "\e[1m\e[32mВсё готово, посмотреть журнал: sudo journalctl -u seid -f -o cat \e[0m" && sleep 1
+echo -e "\e[1m\e[32mВсё готово." && sleep 1
