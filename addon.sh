@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "=================================================="
 
 echo -e "\e[1m\e[32m1. Качаю генезис \e[0m" && sleep 1
@@ -30,6 +31,10 @@ sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 100/g' $HOME/.sei/
 echo "=================================================="
 
 echo -e "\e[1m\e[32m5. Создаю сервисный файл \e[0m" && sleep 1
+
+source ~/.bash_profile
+sleep 1
+
 echo "[Unit]
 Description=seid
 After=network-online.target
