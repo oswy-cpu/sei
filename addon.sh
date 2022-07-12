@@ -63,3 +63,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable seid
 seid tendermint unsafe-reset-all --home $HOME/.sei
 sudo systemctl restart seid
+
+echo -e "\e[1m\e[32m6. Все готово \e[0m" && sleep 1
